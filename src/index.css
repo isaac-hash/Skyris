@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-skyris-primary: #00ff9d; /* Ventus Green */
+  --color-skyris-secondary: #00d4ff; /* Sky Blue */
+  --color-skyris-dark: #0a0a0a;
+}
+
+body {
+  background-color: var(--color-skyris-dark);
+  color: #ffffff;
+  font-family: var(--font-sans);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(to right, var(--color-skyris-primary), var(--color-skyris-secondary));
+  padding: 1px;
+}
+
+.gradient-border > * {
+  background: var(--color-skyris-dark);
+}
